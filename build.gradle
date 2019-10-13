@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.objectprogrammer.bytecodergradle'
+version '0.0.1'
+
+sourceCompatibility = 1.8
+
+tasks.withType(AbstractArchiveTask) {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-08-30'
+    implementation gradleApi()
+}
