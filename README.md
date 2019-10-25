@@ -10,7 +10,7 @@ buildscript {
     }
     dependencies {
         classpath group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-08-30'
-        classpath group: 'com.github.objectprogrammer', name: 'bytecodergradle', version: 'master-SNAPSHOT'
+        classpath group: 'com.github.objectprogrammer', name: 'bytecodergradle', version: '0.0.1'
     }
 }
 
@@ -40,13 +40,17 @@ dependencies {
 
 mainClass (String) is the only required option.
 
-- buildDirectory = "bytecoder"
-- backend = "js" // or "wasm"
-- debugOutput = false
-- exceptionHandling = false
-- optimizer = "ALL"
-- filenamePrefix = "bytecoder"
-- wasmMinimumPages = 512
-- wasmMaximumPages = 1024
-- minify = true
-- preferStackifier = false
+```groovy
+bytecoder {
+    buildDirectory = 'bytecoder'
+    backend = 'js' // or 'wasm'
+    debugOutput = false
+    exceptionHandling = false
+    optimizer = 'ALL'
+    filenamePrefix = 'bytecoder'
+    wasmMinimumPages = 512
+    wasmMaximumPages = 1024
+    minify = true
+    preferStackifier = false
+}
+```
