@@ -17,6 +17,6 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'com.github.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-03'
+    implementation group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-03'
     implementation gradleApi()
 }
