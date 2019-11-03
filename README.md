@@ -9,8 +9,8 @@ buildscript {
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-08-30'
-        classpath group: 'com.github.objectprogrammer', name: 'bytecodergradle', version: '0.0.1'
+        classpath group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-03'
+        classpath group: 'com.github.objectprogrammer', name: 'bytecodergradle', version: '2019-11-03'
     }
 }
 
@@ -25,14 +25,12 @@ bytecoder {
 group 'com.example'
 version '1.0.0'
 
-sourceCompatibility = 1.8
-
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-08-30'
+    compile group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-03'
 }
 ```
 
@@ -52,5 +50,7 @@ bytecoder {
     wasmMaximumPages = 1024
     minify = true
     preferStackifier = false
+    registerAllocator = 'linear' // or 'passthru'
+    additionalClassesToLink = {}
 }
 ```
