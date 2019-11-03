@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.github.objectprogrammer.bytecodergradle'
-version 'a540964'
+version '2019-11-03'
 
 sourceCompatibility = 1.8
 
@@ -14,10 +14,9 @@ tasks.withType(AbstractArchiveTask) {
 
 repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    implementation group: 'com.github.mirkosertic.bytecoder', name: 'bytecoder-core', version: 'a540964'
+    implementation group: 'com.github.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-03'
     implementation gradleApi()
 }

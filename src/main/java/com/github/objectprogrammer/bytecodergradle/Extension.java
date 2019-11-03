@@ -20,10 +20,10 @@ public class Extension {
 	public int wasmMaximumPages = 1024;
 	public boolean minify = true;
 	public boolean preferStackifier = false;
-	public Allocator allocator = Allocator.linear;
+	public Allocator registerAllocator = Allocator.linear;
 	public String[] additionalClassesToLink = {};
 
 	public CompileOptions toCompileOptions() {
-		return new CompileOptions(new Slf4JLogger(), debugOutput, optimizer, exceptionHandling, filenamePrefix, wasmMinimumPages, wasmMaximumPages, minify, preferStackifier, allocator, additionalClassesToLink);
+		return new CompileOptions(new Slf4JLogger(), debugOutput, optimizer, exceptionHandling, filenamePrefix, wasmMinimumPages, wasmMaximumPages, minify, preferStackifier, registerAllocator, additionalClassesToLink);
 	}
 }
