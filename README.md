@@ -9,8 +9,8 @@ buildscript {
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-03'
-        classpath group: 'com.github.objectprogrammer', name: 'bytecodergradle', version: '2019-11-03'
+        classpath group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-04'
+        classpath group: 'com.github.objectprogrammer', name: 'bytecodergradle', version: '2019-11-04'
     }
 }
 
@@ -30,7 +30,7 @@ repositories {
 }
 
 dependencies {
-    compile group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-03'
+    compile group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-04'
 }
 ```
 
