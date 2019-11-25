@@ -22,8 +22,9 @@ public class Extension {
 	public boolean preferStackifier = false;
 	public Allocator registerAllocator = Allocator.linear;
 	public String[] additionalClassesToLink = {};
+	public String[] additionalResources = {};
 
 	public CompileOptions toCompileOptions() {
-		return new CompileOptions(new Slf4JLogger(), debugOutput, optimizer, exceptionHandling, filenamePrefix, wasmMinimumPages, wasmMaximumPages, minify, preferStackifier, registerAllocator, additionalClassesToLink);
+		return new CompileOptions(new Slf4JLogger(), debugOutput, optimizer, exceptionHandling, filenamePrefix, wasmMinimumPages, wasmMaximumPages, minify, preferStackifier, registerAllocator, additionalClassesToLink, additionalResources);
 	}
 }

@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.github.objectprogrammer.bytecodergradle'
-version '2019-11-04'
+version '2019-11-25'
 
 sourceCompatibility = 1.8
 
@@ -17,6 +17,6 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-04'
+    implementation group: 'de.mirkosertic.bytecoder', name: 'bytecoder-core', version: '2019-11-25'
     implementation gradleApi()
 }
