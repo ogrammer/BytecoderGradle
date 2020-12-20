@@ -3,6 +3,7 @@ package com.github.objectprogrammer.bytecodergradle;
 import de.mirkosertic.bytecoder.allocator.Allocator;
 import de.mirkosertic.bytecoder.backend.CompileOptions;
 import de.mirkosertic.bytecoder.backend.CompileTarget;
+import de.mirkosertic.bytecoder.backend.LLVMOptimizationLevel;
 import de.mirkosertic.bytecoder.optimizer.KnownOptimizer;
 import de.mirkosertic.bytecoder.unittest.Slf4JLogger;
 
@@ -16,15 +17,17 @@ public class Extension {
 	public boolean exceptionHandling = false;
 	public KnownOptimizer optimizer = KnownOptimizer.ALL;
 	public String filenamePrefix = "bytecoder";
-	public int wasmMinimumPages = 512;
+	public int wasmInitialPages = 512;
 	public int wasmMaximumPages = 1024;
 	public boolean minify = true;
 	public boolean preferStackifier = false;
 	public Allocator registerAllocator = Allocator.linear;
 	public String[] additionalClassesToLink = {};
 	public String[] additionalResources = {};
+	public LLVMOptimizationLevel llvmOptimizationLevel = LLVMOptimizationLevel.defaultValue();
+	public boolean escapeAnalysis = false;
 
 	public CompileOptions toCompileOptions() {
-		return new CompileOptions(new Slf4JLogger(), debugOutput, optimizer, exceptionHandling, filenamePrefix, wasmMinimumPages, wasmMaximumPages, minify, preferStackifier, registerAllocator, additionalClassesToLink, additionalResources);
+		return new CompileOptions(new Slf4JLogger(), debugOutput, optimizer, exceptionHandling, filenamePrefix, wasmInitialPages, wasmMaximumPages, minify, preferStackifier, registerAllocator, additionalClassesToLink, additionalResources, llvmOptimizationLevel, escapeAnalysis);
 	}
 }

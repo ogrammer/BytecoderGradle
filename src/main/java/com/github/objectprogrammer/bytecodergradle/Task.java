@@ -30,11 +30,11 @@ public class Task extends DefaultTask {
 		bytecoderDir.mkdirs();
 		try {
 			ClassLoader loader = createClassLoader();
-			Class mainClass = loader.loadClass(extension.mainClass);
+			Class<?> mainClass = loader.loadClass(extension.mainClass);
 			CompileTarget compileTarget = new CompileTarget(loader, extension.backend);
 			BytecodeMethodSignature signature = new BytecodeMethodSignature(BytecodePrimitiveTypeRef.VOID,
 					new BytecodeTypeRef[] { new BytecodeArrayTypeRef(BytecodeObjectTypeRef.fromRuntimeClass(String.class), 1) });
-			CompileResult code = compileTarget.compile(extension.toCompileOptions(), mainClass, "main", signature);
+			CompileResult<?> code = compileTarget.compile(extension.toCompileOptions(), mainClass, "main", signature);
 			for (CompileResult.Content content : code.getContent()) {
 				File fileName = new File(bytecoderDir, content.getFileName());
 				try (FileOutputStream fos = new FileOutputStream(fileName)) {
