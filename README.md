@@ -58,3 +58,9 @@ bytecoder {
 	escapeAnalysis = false
 }
 ```
+
+## License
+
+The plugin itself uses the GPLv3 license, however it also has the Classpath Exception (from the JDK) which allows you to use the library and even embed it in a project with any license. Any changes made to the plugin itself must be open-source.
+
+Note: this is just a summary and shouldn't be used for legal purposes, read the [LICENSE](LICENSE) file for more information.
